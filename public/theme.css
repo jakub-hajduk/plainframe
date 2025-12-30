@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Kode+Mono:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+/*
+
+https://leonardocolor.io/theme.html?name=Earth+01&config=%7B%22baseScale%22%3A%22plainframe-color-neutral-%22%2C%22colorScales%22%3A%5B%7B%22name%22%3A%22plainframe-color-neutral-%22%2C%22colorKeys%22%3A%5B%22%235a5f66%22%5D%2C%22colorspace%22%3A%22CAM02p%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.1%22%2C%221.3%22%2C%221.53%22%2C%221.86%22%2C%222.3%22%2C%224.5%22%2C%226.5%22%2C%229.3%22%2C%2213.2%22%2C%2217.2%22%2C%2219%22%2C%2220%22%5D%2C%22smooth%22%3Atrue%7D%2C%7B%22name%22%3A%22plainframe-color-tinted-%22%2C%22colorKeys%22%3A%5B%22%23737a82%22%5D%2C%22colorspace%22%3A%22CAM02p%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.1%22%2C%221.3%22%2C%221.53%22%2C%221.86%22%2C%222.3%22%2C%224.5%22%2C%226.5%22%2C%229.3%22%2C%2213.2%22%2C%2217.2%22%2C%2219%22%2C%2220%22%5D%2C%22smooth%22%3Atrue%7D%2C%7B%22name%22%3A%22plainframe-color-primary-%22%2C%22colorKeys%22%3A%5B%22%235fb3ff%22%5D%2C%22colorspace%22%3A%22CAM02p%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.1%22%2C%221.3%22%2C%221.53%22%2C%221.86%22%2C%222.3%22%2C%224.5%22%2C%226.5%22%2C%229.3%22%2C%2213.2%22%2C%2217.2%22%2C%2219%22%2C%2220%22%5D%2C%22smooth%22%3Atrue%7D%2C%7B%22name%22%3A%22plainframe-color-secondary-%22%2C%22colorKeys%22%3A%5B%22%238fafd1%22%5D%2C%22colorspace%22%3A%22CAM02p%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.1%22%2C%221.3%22%2C%221.53%22%2C%221.86%22%2C%222.3%22%2C%224.5%22%2C%226.5%22%2C%229.3%22%2C%2213.2%22%2C%2217.2%22%2C%2219%22%2C%2220%22%5D%2C%22smooth%22%3Atrue%7D%2C%7B%22name%22%3A%22plainframe-color-critical-%22%2C%22colorKeys%22%3A%5B%22%23ff5f5f%22%5D%2C%22colorspace%22%3A%22CAM02p%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.1%22%2C%221.3%22%2C%221.53%22%2C%221.86%22%2C%222.3%22%2C%224.5%22%2C%226.5%22%2C%229.3%22%2C%2213.2%22%2C%2217.2%22%2C%2219%22%2C%2220%22%5D%2C%22smooth%22%3Atrue%7D%2C%7B%22name%22%3A%22plainframe-color-caution-%22%2C%22colorKeys%22%3A%5B%22%23ffaf3f%22%5D%2C%22colorspace%22%3A%22CAM02p%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.1%22%2C%221.3%22%2C%221.53%22%2C%221.86%22%2C%222.3%22%2C%224.5%22%2C%226.5%22%2C%229.3%22%2C%2213.2%22%2C%2217.2%22%2C%2219%22%2C%2220%22%5D%2C%22smooth%22%3Atrue%7D%2C%7B%22name%22%3A%22plainframe-color-info-%22%2C%22colorKeys%22%3A%5B%22%235f9dff%22%5D%2C%22colorspace%22%3A%22CAM02p%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.1%22%2C%221.3%22%2C%221.53%22%2C%221.86%22%2C%222.3%22%2C%224.5%22%2C%226.5%22%2C%229.3%22%2C%2213.2%22%2C%2217.2%22%2C%2219%22%2C%2220%22%5D%2C%22smooth%22%3Atrue%7D%2C%7B%22name%22%3A%22plainframe-color-positive-%22%2C%22colorKeys%22%3A%5B%22%2336bf6a%22%2C%22%23007b3f%22%2C%22%2300b05d%22%5D%2C%22colorspace%22%3A%22LAB%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.1%22%2C%221.3%22%2C%221.53%22%2C%221.86%22%2C%222.3%22%2C%224.5%22%2C%226.5%22%2C%229.3%22%2C%2213.2%22%2C%2217.2%22%2C%2219%22%2C%2220%22%5D%2C%22smooth%22%3Atrue%7D%5D%2C%22lightness%22%3A97%2C%22contrast%22%3A0.48%2C%22saturation%22%3A94%2C%22formula%22%3A%22wcag2%22%7D
+*/
+
+:root {
+    font-size: 14px;
+
+    /*--plainframe-font-family: 'Kode Mono', monospace;*/
+    /*--plainframe-font-family: 'Atkinson Hyperlegible Mono', monospace;*/
+    --plainframe-font-family: "Google Sans Code", monospace;
+    /*--plainframe-font-family: 'Source Code Pro', monospace;*/
+    --plainframe-aspect-ratio: 1.25;
+
+    --plainframe-size-regular-100: 0.5rem;
+    --plainframe-size-regular-200: 0.563rem;
+    --plainframe-size-regular-300: 0.625rem;
+    --plainframe-size-regular-400: 0.688rem;
+    --plainframe-size-regular-500: 0.813rem;
+    --plainframe-size-regular-600: 0.875rem;
+    --plainframe-size-regular-700: 1rem;
+    --plainframe-size-regular-800: 1.125rem;
+    --plainframe-size-regular-900: 1.25rem;
+    --plainframe-size-regular-1000: 1.438rem;
+    --plainframe-size-regular-1100: 1.625rem;
+    --plainframe-size-regular-1200: 1.813rem;
+    --plainframe-size-regular-1300: 2rem;
+
+    --plainframe-size-large-100: calc(var(--plainframe-size-regular-100) * 1.7);
+    --plainframe-size-large-200: calc(var(--plainframe-size-regular-200) * 1.7);
+    --plainframe-size-large-300: calc(var(--plainframe-size-regular-300) * 1.7);
+    --plainframe-size-large-400: calc(var(--plainframe-size-regular-400) * 1.7);
+    --plainframe-size-large-500: calc(var(--plainframe-size-regular-500) * 1.7);
+    --plainframe-size-large-600: calc(var(--plainframe-size-regular-600) * 1.7);
+    --plainframe-size-large-700: calc(var(--plainframe-size-regular-700) * 1.7);
+    --plainframe-size-large-800: calc(var(--plainframe-size-regular-800) * 1.7);
+    --plainframe-size-large-900: calc(var(--plainframe-size-regular-900) * 1.7);
+    --plainframe-size-large-1000:calc(var(--plainframe-size-regular-1000) * 1.7);
+    --plainframe-size-large-1100:calc(var(--plainframe-size-regular-1100) * 1.7);
+    --plainframe-size-large-1200:calc(var(--plainframe-size-regular-1200) * 1.7);
+    --plainframe-size-large-1300:calc(var(--plainframe-size-regular-1300) * 1.7);
+
+    --plainframe-space-medium-100: 0.5rem; /* 8px  */
+    --plainframe-space-medium-200: 0.563rem; /* 9px  */
+    --plainframe-space-medium-300: 0.625rem; /* 10px */
+    --plainframe-space-medium-400: 0.688rem; /* 11px */
+    --plainframe-space-medium-500: 0.813rem; /* 13px */
+    --plainframe-space-medium-600: 0.875rem; /* 14px */
+    --plainframe-space-medium-700: 1rem; /* 16px */
+    --plainframe-space-medium-800: 1.125rem; /* 18px */
+    --plainframe-space-medium-900: 1.25rem; /* 20px */
+    --plainframe-space-medium-1000: 1.438rem; /* 23px */
+    --plainframe-space-medium-1100: 1.625rem; /* 26px */
+    --plainframe-space-medium-1200: 1.813rem; /* 29px */
+    --plainframe-space-medium-1300: 2rem; /* 32px */
+
+    --plainframe-radius-rectangle-100: 0.25rem; /* 4px;    */
+    --plainframe-radius-rectangle-200: 0.344rem; /* 5.5px;  */
+    --plainframe-radius-rectangle-300: 0.438rem; /* 7px;    */
+    --plainframe-radius-rectangle-400: 0.531rem; /* 8.5px;  */
+    --plainframe-radius-rectangle-500: 0.625rem; /* 10px;   */
+    --plainframe-radius-rectangle-600: 0.719rem; /* 11.5px; */
+    --plainframe-radius-rectangle-700: 0.813rem; /* 13px;   */
+    --plainframe-radius-rectangle-800: 0.906rem; /* 14.5px; */
+    --plainframe-radius-rectangle-900: 1rem; /* 16px;   */
+    --plainframe-radius-rectangle-1000: 1.094rem; /* 17.5px; */
+    --plainframe-radius-rectangle-1100: 1.188rem; /* 19px;   */
+    --plainframe-radius-rectangle-1200: 1.281rem; /* 20.5px; */
+    --plainframe-radius-rectangle-1300: 1.375rem; /* 22px;   */
+
+    --plainframe-typography-heading-100:
+    var(--plainframe-size-large-100) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-200:
+    var(--plainframe-size-large-200) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-300:
+    var(--plainframe-size-large-300) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-400:
+    var(--plainframe-size-large-400) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-500:
+    var(--plainframe-size-large-500) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-600:
+    var(--plainframe-size-large-600) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-700:
+    var(--plainframe-size-large-700) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-800:
+    var(--plainframe-size-large-800) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-900:
+    var(--plainframe-size-large-900) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-1000:
+    var(--plainframe-size-large-1000) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-1100:
+    var(--plainframe-size-large-1100) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-1200:
+    var(--plainframe-size-large-1200) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-heading-1300:
+    var(--plainframe-size-large-1300) / 1.5 var(--plainframe-font-family);
+
+    --plainframe-typography-body-100:
+        var(--plainframe-size-regular-100) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-200:
+        var(--plainframe-size-regular-200) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-300:
+        var(--plainframe-size-regular-300) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-400:
+        var(--plainframe-size-regular-400) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-500:
+        var(--plainframe-size-regular-500) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-600:
+        var(--plainframe-size-regular-600) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-700:
+        var(--plainframe-size-regular-700) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-800:
+        var(--plainframe-size-regular-800) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-900:
+        var(--plainframe-size-regular-900) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-1000:
+        var(--plainframe-size-regular-1000) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-1100:
+        var(--plainframe-size-regular-1100) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-1200:
+        var(--plainframe-size-regular-1200) / 1.8 var(--plainframe-font-family);
+    --plainframe-typography-body-1300:
+        var(--plainframe-size-regular-1300) / 1.8 var(--plainframe-font-family);
+
+    --plainframe-typography-caption-100:
+    bold var(--plainframe-size-regular-100) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-200:
+    bold var(--plainframe-size-regular-200) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-300:
+    bold var(--plainframe-size-regular-300) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-400:
+    bold var(--plainframe-size-regular-400) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-500:
+    bold var(--plainframe-size-regular-500) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-600:
+    bold var(--plainframe-size-regular-600) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-700:
+    bold var(--plainframe-size-regular-700) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-800:
+    bold var(--plainframe-size-regular-800) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-900:
+    bold var(--plainframe-size-regular-900) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-1000:
+    bold var(--plainframe-size-regular-1000) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-1100:
+    bold var(--plainframe-size-regular-1100) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-1200:
+    bold var(--plainframe-size-regular-1200) / 1.5 var(--plainframe-font-family);
+    --plainframe-typography-caption-1300:
+    bold var(--plainframe-size-regular-1300) / 1.5 var(--plainframe-font-family);
+
+    --plainframe-color-canvas-100: #ffffff;
+    --plainframe-color-canvas-200: #f6f5f7;
+      --plainframe-color-neutral-100: #f4f3f5;
+      --plainframe-color-neutral-200: #f0f0f2;
+      --plainframe-color-neutral-300: #e6e6e8;
+      --plainframe-color-neutral-400: #dddde1;
+      --plainframe-color-neutral-500: #cfd0d4;
+      --plainframe-color-neutral-600: #c1c3c7;
+      --plainframe-color-neutral-700: #94979e;
+      --plainframe-color-neutral-800: #7c8087;
+      --plainframe-color-neutral-900: #656a72;
+      --plainframe-color-neutral-1000: #51555c;
+      --plainframe-color-neutral-1100: #41454b;
+      --plainframe-color-neutral-1200: #3b3f45;
+      --plainframe-color-neutral-1300: #393c42;
+      --plainframe-color-tinted-100: #f3f3f5;
+      --plainframe-color-tinted-200: #f0f0f2;
+      --plainframe-color-tinted-300: #e5e6e9;
+      --plainframe-color-tinted-400: #dadce0;
+      --plainframe-color-tinted-500: #ced1d5;
+      --plainframe-color-tinted-600: #bfc3c8;
+      --plainframe-color-tinted-700: #91989f;
+      --plainframe-color-tinted-800: #798088;
+      --plainframe-color-tinted-900: #646b71;
+      --plainframe-color-tinted-1000: #50555b;
+      --plainframe-color-tinted-1100: #414549;
+      --plainframe-color-tinted-1200: #3c3f43;
+      --plainframe-color-tinted-1300: #393c40;
+      --plainframe-color-primary-100: #e8f3ff;
+      --plainframe-color-primary-200: #e1f1ff;
+      --plainframe-color-primary-300: #d0eaff;
+      --plainframe-color-primary-400: #b9e1ff;
+      --plainframe-color-primary-500: #a1d6ff;
+      --plainframe-color-primary-600: #87caff;
+      --plainframe-color-primary-700: #559cdd;
+      --plainframe-color-primary-800: #4b84b8;
+      --plainframe-color-primary-900: #436d95;
+      --plainframe-color-primary-1000: #395774;
+      --plainframe-color-primary-1100: #32475d;
+      --plainframe-color-primary-1200: #2e4154;
+      --plainframe-color-primary-1300: #2c3e4f;
+      --plainframe-color-secondary-100: #edf2fa;
+      --plainframe-color-secondary-200: #e9eff9;
+      --plainframe-color-secondary-300: #dde8f6;
+      --plainframe-color-secondary-400: #cedff2;
+      --plainframe-color-secondary-500: #bdd3ec;
+      --plainframe-color-secondary-600: #abc6e3;
+      --plainframe-color-secondary-700: #7f9ab7;
+      --plainframe-color-secondary-800: #6c829a;
+      --plainframe-color-secondary-900: #5b6b7e;
+      --plainframe-color-secondary-1000: #4a5664;
+      --plainframe-color-secondary-1100: #3e4650;
+      --plainframe-color-secondary-1200: #394049;
+      --plainframe-color-secondary-1300: #363d45;
+      --plainframe-color-critical-100: #ffefed;
+      --plainframe-color-critical-200: #ffecea;
+      --plainframe-color-critical-300: #ffdfdc;
+      --plainframe-color-critical-400: #ffd2cd;
+      --plainframe-color-critical-500: #ffc1bc;
+      --plainframe-color-critical-600: #ffaea8;
+      --plainframe-color-critical-700: #fb6664;
+      --plainframe-color-critical-800: #d85452;
+      --plainframe-color-critical-900: #b24745;
+      --plainframe-color-critical-1000: #8b3c39;
+      --plainframe-color-critical-1100: #6f3330;
+      --plainframe-color-critical-1200: #652f2d;
+      --plainframe-color-critical-1300: #602d2b;
+      --plainframe-color-caution-100: #fff2d7;
+      --plainframe-color-caution-200: #ffedc8;
+      --plainframe-color-caution-300: #ffe3aa;
+      --plainframe-color-caution-400: #ffd78b;
+      --plainframe-color-caution-500: #ffc86b;
+      --plainframe-color-caution-600: #ffb44f;
+      --plainframe-color-caution-700: #c68b3c;
+      --plainframe-color-caution-800: #a67638;
+      --plainframe-color-caution-900: #886333;
+      --plainframe-color-caution-1000: #6b502d;
+      --plainframe-color-caution-1100: #564128;
+      --plainframe-color-caution-1200: #4e3c25;
+      --plainframe-color-caution-1300: #4a3924;
+      --plainframe-color-info-100: #ebf2ff;
+      --plainframe-color-info-200: #e6efff;
+      --plainframe-color-info-300: #d8e8ff;
+      --plainframe-color-info-400: #c7dfff;
+      --plainframe-color-info-500: #b1d3ff;
+      --plainframe-color-info-600: #9ac6ff;
+      --plainframe-color-info-700: #5d97f1;
+      --plainframe-color-info-800: #4e80cd;
+      --plainframe-color-info-900: #436aa7;
+      --plainframe-color-info-1000: #395581;
+      --plainframe-color-info-1100: #314666;
+      --plainframe-color-info-1200: #2e405c;
+      --plainframe-color-info-1300: #2c3c56;
+      --plainframe-color-positive-100: #e6f6e8;
+      --plainframe-color-positive-200: #dff4e3;
+      --plainframe-color-positive-300: #cfeed5;
+      --plainframe-color-positive-400: #bce7c5;
+      --plainframe-color-positive-500: #a3deb0;
+      --plainframe-color-positive-600: #86d499;
+      --plainframe-color-positive-700: #21ad5f;
+      --plainframe-color-positive-800: #15924f;
+      --plainframe-color-positive-900: #157942;
+      --plainframe-color-positive-1000: #176136;
+      --plainframe-color-positive-1100: #174f2d;
+      --plainframe-color-positive-1200: #174829;
+      --plainframe-color-positive-1300: #164427;
+}
+
+body {
+    font: var(--plainframe-typography-body-700);
+    background-color: var(--plainframe-color-canvas-100);
+}

@@ -1,0 +1,95 @@
+body {
+    font: var(--plainframe-typography-body-700);
+    color: var(--plainframe-color-neutral-1200)
+}
+
+p {
+    font: var(--plainframe-typography-body-700);
+    margin: var(--plainframe-space-medium-700) 0;
+    text-align: justify;
+    line-height: 1.8
+}
+
+ul, ol, dl {
+    margin: var(--plainframe-space-medium-700) 0;
+    padding-left: var(--plainframe-space-medium-1300);
+}
+
+ul li,
+ol li,
+dl dt {
+    margin: var(--plainframe-space-medium-100) 0;
+}
+
+
+h1 {
+    font: var(--plainframe-typography-heading-1000);
+    font-weight: 600;
+    margin: var(--plainframe-space-medium-700) 0;
+}
+
+h2 {
+    font: var(--plainframe-typography-heading-900);
+    font-weight: 500;
+    margin: var(--plainframe-space-medium-700) 0;
+}
+
+h3 {
+    font: var(--plainframe-typography-heading-800);
+    font-weight: 500;
+    margin: var(--plainframe-space-medium-700) 0;
+}
+
+h4 {
+    font: var(--plainframe-typography-heading-700);
+    font-weight: 500;
+    margin: var(--plainframe-space-medium-700) 0;
+}
+
+h5 {
+    font: var(--plainframe-typography-heading-600);
+    font-weight: 300;
+    margin: var(--plainframe-space-medium-700) 0;
+}
+
+h6 {
+    font: var(--plainframe-typography-heading-500);
+    font-weight: 300;
+    margin: var(--plainframe-space-medium-700) 0;
+}
+
+small {
+    color: var(--plainframe-color-neutral-700);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: var(--plainframe-space-medium-700) 0;
+}
+
+table caption {
+    padding: var(--plainframe-space-medium-500) var(--plainframe-space-medium-700);
+}
+
+table th,
+table td {
+    padding: var(--plainframe-space-medium-500) var(--plainframe-space-medium-700);
+    border: 1px solid var(--plainframe-color-neutral-300);
+}
+
+table th {
+    color: var(--plainframe-color-neutral-900);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--plainframe-color-neutral-100);
+}
+
+table tr:hover {
+    background-color: var(--plainframe-color-neutral-100);
+}
+
+table tr:hover:nth-child(even) {
+    background-color: var(--plainframe-color-neutral-200);
+}

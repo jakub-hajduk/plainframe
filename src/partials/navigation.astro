@@ -1,0 +1,83 @@
+---
+import { getCollection } from 'astro:content'
+
+console.log( await getCollection('content') )
+---
+<nav id="main-navigation">
+    <a class="section-heading" href="/components">Components</a>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/guides">Guides</a></li>
+        <li><a href="/resources">Resources</a>
+            <ul>
+                <li><a href="/resources/tutorials">Tutorials</a></li>
+                <li><a href="/resources/examples">Examples</a></li>
+                <li><a href="/resources/faq">FAQ</a></li>
+                <li><a href="/resources/community">Community</a></li>
+                <li><a href="/resources/roadmap">Roadmap</a></li>
+                <li><a href="/resources/updates">Updates</a></li>
+            </ul>
+        </li>
+
+        <li><a href="/support" class="active">Support</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/about">About</a></li>
+        <li>
+            <a href="/contact">Contact</a>
+            <ul>
+                <li><a href="/contact/email" class="active">Email</a></li>
+                <li><a href="/contact/phone">Phone</a></li>
+                <li><a href="/contact/address">Address</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<style>
+    #main-navigation {
+        background-color: var(--plainframe-color-canvas-100);
+        padding: 0 var(--plainframe-space-medium-700);
+        font: var(--plainframe-typography-body-600);
+    }
+
+    #main-navigation a.section-heading {
+        font: var(--plainframe-typography-body-700);
+        font-weight: 600;
+        text-transform: uppercase;
+        /*margin-bottom: var(--plainframe-space-small-500);*/
+    }
+
+    #main-navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: var(--plainframe-space-medium-500);
+    }
+
+    #main-navigation > ul {
+        padding-left: 0;
+    }
+
+    #main-navigation ul li {
+        margin: 0;
+    }
+
+    #main-navigation a {
+        display: block;
+        text-decoration: none;
+        color: var(--plainframe-color-neutral-1300);
+        padding: var(--plainframe-space-medium-100) var(--plainframe-space-medium-600);
+        border-radius: var(--plainframe-radius-rectangle-200);
+    }
+
+    #main-navigation a.active {
+        background-color: var(--plainframe-color-primary-100);
+        font-weight: 600;
+        color: var(--plainframe-color-primary-1300);
+    }
+
+    #main-navigation a:hover {
+        text-decoration: underline;
+    }
+</style>

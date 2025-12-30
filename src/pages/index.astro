@@ -1,0 +1,170 @@
+---
+import WritingLayout from "../layouts/WritingLayout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Note from "../components/note.astro";
+import { Code,  } from 'astro:components'
+---
+
+<MainLayout>
+    <PageLayout>
+        <WritingLayout>
+            <h1>The Kitchen Sink</h1>
+            <!-- / Basic Typography -->
+            <h2>Basic Typography</h2>
+            <p class="lead">
+            This is a leading paragraph, used for intros. Cras mattis consectetur
+            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
+            egestas eget quam.
+            </p>
+            <Note title="Some information title" className="breakout">
+                This is information message
+            </Note>
+            <Note type="positive" title="Some positive title" className="breakout">
+                This is a positive message
+            </Note>
+            <Note type="caution" title="Some cautionary title" className="breakout">
+                This is a cautionary message
+            </Note>
+            <Note type="critical" title="Some critical title" className="breakout">
+                This is critical message
+            </Note>
+            <p>
+            This page demonstrates the styleguide implementation, covering all
+            typographical elements that a typical website will contain. Sed
+            posuere consectetur est at lobortis. Etiam porta sem malesuada magna
+            mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+            condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas
+            sed diam eget risus varius blandit sit amet non magna.
+            </p>
+            <Code code="@customElement('elo')\nclass Component {}"  lang="typescript">
+            </Code>
+            <blockquote>
+            <p>
+                “Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue.
+                Ut a est eget ligula molestie gravida. Curabitur massa. Donec
+                eleifend, libero at sagittis mollis, tellus est malesuada tellus, at
+                luctus turpis elit sit amet quam. Vivamus pretium ornare est.”
+            </p>
+            </blockquote>
+            <h1>This is a H1</h1>
+            <h2>This is a H2</h2>
+            <h3>This is a H3</h3>
+            <h4>This is a H4</h4>
+            <h5>This is a H5</h5>
+            <h6>This is a H6</h6>
+            <p>
+            A small paragraph to demonstrate
+            <em>emphasis</em>
+            and show
+            <strong>important</strong>
+            bits.
+            </p>
+            <hr />
+            <hgroup>
+            <h2>Some List Type Stuff</h2>
+            <h3>A sub-heading</h3>
+            </hgroup>
+            <h4>This is an unordered list</h4>
+            <ul>
+            <li>This is a list item</li>
+            <li>So is this - there could be more</li>
+            <li>
+                Make sure to style list items to:
+                <ul>
+                <li>Not forgetting child list items</li>
+                <li>Not forgetting child list items</li>
+                <li>Not forgetting child list items</li>
+                <li>Not forgetting child list items</li>
+                </ul>
+            </li>
+            <li>A couple more</li>
+            <li>top level list items</li>
+            </ul>
+            <h4>This is an ordered list</h4>
+            <ol>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>
+                Aliquam tincidunt mauris eu risus.
+                <ol>
+                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                <li>Aliquam tincidunt mauris eu risus.</li>
+                </ol>
+            </li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            </ol>
+            <h4>This is a Definition List</h4>
+            <dl>
+            <dt>Definition list</dt>
+            <dd>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </dd>
+            <dt>Lorem ipsum dolor sit amet</dt>
+            <dd>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </dd>
+            </dl>
+            <hr />
+            <header>
+            <h2>This bit is all about tables!</h2>
+            </header>
+            <p>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+            eleifend leo.
+            </p>
+            <table class="table">
+            <caption>
+                Table caption goes here, if required.
+            </caption>
+            <thead>
+                <tr>
+                <td></td>
+                <th scope="col">Heading 1</th>
+                <th scope="col">Heading 2</th>
+                <th scope="col">Heading 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td scope="row">table data</td>
+                <td>table data</td>
+                <td>table data</td>
+                <td>table data</td>
+                </tr>
+                <tr>
+                <td scope="row">table data</td>
+                <td>table data</td>
+                <td>table data</td>
+                <td>table data</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                <td scope="row">table data</td>
+                <td>table data</td>
+                <td>table data</td>
+                <td>table data</td>
+                </tr>
+            </tfoot>
+            </table>
+            <p>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+            eleifend leo.
+            </p>
+        </WritingLayout>
+    </PageLayout>
+</MainLayout>

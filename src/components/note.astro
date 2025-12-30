@@ -1,0 +1,65 @@
+---
+interface Props {
+  title?: string;
+  className?: string;
+  type?: 'tip' | 'caution' | 'critical' | 'positive';
+}
+
+const { title, className, type } = Astro.props;
+const g = Astro.slots.render('default', {})
+---
+
+<div class={`note ${type || 'info'} ${className || ''}`}>
+    { title && <span class="note-title">{ title }</span> }
+    <slot />
+</div>
+
+
+<style>
+    .note {
+        margin: var(--plainframe-space-medium-700) 0;
+        padding: var(--plainframe-space-medium-900) var(--plainframe-space-medium-1300);
+        border-radius: var(--plainframe-radius-rectangle-300);
+    }
+
+    .note-title {
+        display: block;
+        font-weight: bold;
+        margin-bottom: var(--plainframe-space-medium-700);
+    }
+
+    .note.info {
+        background-color: var(--plainframe-color-info-100);
+        color: var(--plainframe-color-info-900);
+    }
+
+    .note.info .note-title {
+        color: var(--plainframe-color-info-800);
+    }
+
+    .note.caution {
+        background-color: var(--plainframe-color-caution-100);
+        color: var(--plainframe-color-caution-1200);
+    }
+
+    .note.caution .note-title {
+        color: var(--plainframe-color-caution-800);
+    }
+
+    .note.critical {
+        background-color: var(--plainframe-color-critical-100);
+        color: var(--plainframe-color-critical-1000);
+    }
+
+    .note.critical .note-title {
+        color: var(--plainframe-color-critical-800);
+    }
+
+    .note.positive {
+        background-color: var(--plainframe-color-positive-100);
+        color: var(--plainframe-color-positive-1000);
+    }
+    .note.positive .note-title {
+        color: var(--plainframe-color-positive-800);
+    }
+</style>
