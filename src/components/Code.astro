@@ -1,0 +1,16 @@
+---
+import { Code } from 'astro-expressive-code/components'
+
+interface Props {
+  code?: string;
+  lang?: string;
+  className?: string;
+}
+
+const { code, lang, className } = Astro.props
+
+console.log(code)
+---
+
+<Code lang={lang} code={code} class={className || ''}/>
+

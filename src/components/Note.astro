@@ -6,7 +6,6 @@ interface Props {
 }
 
 const { title, className, type } = Astro.props;
-const g = Astro.slots.render('default', {})
 ---
 
 <div class={`note ${type || 'info'} ${className || ''}`}>

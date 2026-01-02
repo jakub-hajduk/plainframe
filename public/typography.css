@@ -93,3 +93,8 @@ table tr:hover {
 table tr:hover:nth-child(even) {
     background-color: var(--plainframe-color-neutral-200);
 }
+
+
+.expressive-code {
+    margin: var(--plainframe-space-medium-700) 0;
+}

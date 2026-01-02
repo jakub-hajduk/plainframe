@@ -1,9 +1,18 @@
 ---
+import Code from '../components/Code.astro'
 import WritingLayout from "../layouts/WritingLayout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import Note from "../components/note.astro";
-import { Code,  } from 'astro:components'
+import Note from "../components/Note.astro";
+
+
+const code = `@customElement('elo')
+class Component {
+  private dupa = 'Elo';
+  constructor() {
+    this.dupa = 'Elo 2';
+  }
+}`
 ---
 
 <MainLayout>
@@ -29,6 +38,7 @@ import { Code,  } from 'astro:components'
             <Note type="critical" title="Some critical title" className="breakout">
                 This is critical message
             </Note>
+            <Code code={code} lang="typescript" className="breakout"/>
             <p>
             This page demonstrates the styleguide implementation, covering all
             typographical elements that a typical website will contain. Sed
@@ -37,8 +47,6 @@ import { Code,  } from 'astro:components'
             condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas
             sed diam eget risus varius blandit sit amet non magna.
             </p>
-            <Code code="@customElement('elo')\nclass Component {}"  lang="typescript">
-            </Code>
             <blockquote>
             <p>
                 “Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur
