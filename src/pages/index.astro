@@ -4,6 +4,7 @@ import WritingLayout from "../layouts/WritingLayout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Note from "../components/Note.astro";
+import Hero from '../partials/Hero.astro'
 
 
 const code = `@customElement('elo')
@@ -18,7 +19,14 @@ class Component {
 <MainLayout>
     <PageLayout>
         <WritingLayout>
-            <h1>The Kitchen Sink</h1>
+            <Hero>
+              <h1>The Kitchen Sink</h1>
+              <p class="hero-description">
+                  This is a leading paragraph, used for intros. Cras mattis consectetur
+                  purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
+                  egestas eget quam.
+              </p>
+            </Hero>
             <!-- / Basic Typography -->
             <h2>Basic Typography</h2>
             <p class="lead">
@@ -26,19 +34,6 @@ class Component {
             purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
             egestas eget quam.
             </p>
-            <Note title="Some information title" className="breakout">
-                This is information message
-            </Note>
-            <Note type="positive" title="Some positive title" className="breakout">
-                This is a positive message
-            </Note>
-            <Note type="caution" title="Some cautionary title" className="breakout">
-                This is a cautionary message
-            </Note>
-            <Note type="critical" title="Some critical title" className="breakout">
-                This is critical message
-            </Note>
-            <Code code={code} lang="typescript" className="breakout"/>
             <p>
             This page demonstrates the styleguide implementation, covering all
             typographical elements that a typical website will contain. Sed
@@ -70,6 +65,19 @@ class Component {
             bits.
             </p>
             <hr />
+            <Note title="Some information title" className="breakout">
+                This is information message
+            </Note>
+            <Note type="positive" title="Some positive title" className="breakout">
+                This is a positive message
+            </Note>
+            <Note type="caution" title="Some cautionary title" className="breakout">
+                This is a cautionary message
+            </Note>
+            <Note type="critical" title="Some critical title" className="breakout">
+                This is critical message
+            </Note>
+            <Code code={code} lang="typescript" className="breakout"/>
             <hgroup>
             <h2>Some List Type Stuff</h2>
             <h3>A sub-heading</h3>
@@ -176,3 +184,11 @@ class Component {
         </WritingLayout>
     </PageLayout>
 </MainLayout>
+
+<style>
+    .hero-description {
+        font-size: var(--plainframe-size-regular-1000);
+        margin: var(--plainframe-space-medium-1300) 0;
+        font-style: italic;
+    }
+</style>
