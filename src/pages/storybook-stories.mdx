@@ -2,6 +2,8 @@ import MainLayout from '../layouts/MainLayout.astro'
 import PageLayout from '../layouts/PageLayout.astro'
 import WritingLayout from '../layouts/WritingLayout.astro'
 import StorybookBadge from '../components/examples/StorybookBadge.astro'
+import * as BadgeStories from '../stories/Badge.stories'
+import * as BadgeCustomStories from '../stories/BadgeCustom.stories'
 import {
   Meta,
   Title,
@@ -11,7 +13,9 @@ import {
   Story,
   Source,
   ArgsTable,
-  Controls
+  Controls,
+  Primary,
+  Stories
 } from '@storybook/blocks'
 
 <MainLayout>
@@ -70,6 +74,32 @@ import {
       />
 
       Final text block: all plain text, headings, and Storybook MDX blocks can be mixed on one page.
+
+      <h2>Stories from .stories.ts</h2>
+      <Meta of={BadgeStories} />
+      <Description>
+        These stories are loaded from a CSF module in `src/stories/Badge.stories.ts`.
+      </Description>
+      <Canvas>
+        <Primary of={BadgeStories} />
+      </Canvas>
+      <Canvas>
+        <Story of={BadgeStories} name="Warning" />
+      </Canvas>
+      <ArgsTable of={BadgeStories} name="Primary" />
+
+      <h2>Stories from .stories.tsx</h2>
+      <Meta of={BadgeCustomStories} />
+      <Description>
+        These stories are loaded from `src/stories/BadgeCustom.stories.tsx`.
+      </Description>
+      <Canvas>
+        <Primary of={BadgeCustomStories} />
+      </Canvas>
+      <Canvas>
+        <Stories of={BadgeCustomStories} />
+      </Canvas>
+      <Controls of={BadgeCustomStories} name="CustomRender" />
     </WritingLayout>
   </PageLayout>
 </MainLayout>

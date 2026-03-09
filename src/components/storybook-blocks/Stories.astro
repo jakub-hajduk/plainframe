@@ -1,4 +1,22 @@
-<section class="sb-stories">
-  <slot />
-</section>
+---
+import Story from './Story.astro'
+import { resolveStories } from './csf'
 
+interface Props {
+  of?: unknown
+}
+
+const { of } = Astro.props as Props
+const hasChildren = await Astro.slots.has('default')
+const stories = resolveStories(of)
+---
+
+<section class="sb-stories">
+  {hasChildren ? (
+    <slot />
+  ) : stories.length ? (
+    stories.map((story) => <Story of={story.raw} name={story.name} />)
+  ) : (
+    <p>No stories available.</p>
+  )}
+</section>

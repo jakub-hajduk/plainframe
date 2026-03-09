@@ -1,9 +1,13 @@
 ---
+import { resolveMetaTitle } from './csf'
+
 interface Props {
   title?: string
+  of?: unknown
 }
 
-const { title } = Astro.props as Props
+const { title, of } = Astro.props as Props
+const resolvedTitle = resolveMetaTitle(of, title)
 ---
 
-{title ? <div hidden data-storybook-title={title} /> : null}
+{resolvedTitle ? <div hidden data-storybook-title={resolvedTitle} /> : null}

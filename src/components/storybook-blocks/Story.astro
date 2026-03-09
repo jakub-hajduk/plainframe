@@ -1,33 +1,24 @@
 ---
-interface StoryLike {
-  name?: string
-  storyName?: string
-  args?: Record<string, unknown>
-  component?: unknown
-  render?: (args?: Record<string, unknown>) => unknown
-}
+import { resolveStory } from './csf'
 
 interface Props {
   name?: string
-  of?: StoryLike | unknown
+  of?: unknown
 }
 
 const { name, of } = Astro.props as Props
 const hasChildren = await Astro.slots.has('default')
 
-const inferred = (of ?? {}) as StoryLike
-const storyName = name ?? inferred.storyName ?? inferred.name ?? 'Story'
-const storyArgs = inferred.args ?? {}
-
-const StoryComponent = (
-  inferred.component ||
-  (typeof of === 'function' ? of : null)
-) as unknown
+const inferred = resolveStory(of, name)
+const storyName = inferred?.name ?? name ?? 'Story'
+const storyArgs = inferred?.args ?? {}
+const StoryComponent = inferred?.component ?? (typeof of === 'function' ? of : null)
+const render = inferred?.render
 
 let renderedHtml: string | null = null
-if (!hasChildren && typeof inferred.render === 'function') {
+if (!hasChildren && typeof render === 'function') {
   try {
-    const maybeHtml = inferred.render(storyArgs)
+    const maybeHtml = render(storyArgs)
     if (typeof maybeHtml === 'string') {
       renderedHtml = maybeHtml
     }
@@ -66,4 +57,3 @@ if (!hasChildren && typeof inferred.render === 'function') {
     overflow-x: auto;
   }
 </style>
-

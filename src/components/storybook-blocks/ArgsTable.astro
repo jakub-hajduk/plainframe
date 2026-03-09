@@ -1,12 +1,14 @@
 ---
+import { resolveStory } from './csf'
+
 interface Props {
-  of?: {
-    args?: Record<string, unknown>
-  }
+  of?: unknown
+  name?: string
 }
 
-const { of } = Astro.props as Props
-const args = of?.args ?? {}
+const { of, name } = Astro.props as Props
+const story = resolveStory(of, name)
+const args = story?.args ?? {}
 const entries = Object.entries(args)
 const hasChildren = await Astro.slots.has('default')
 ---
@@ -48,4 +50,3 @@ const hasChildren = await Astro.slots.has('default')
     text-align: left;
   }
 </style>
-

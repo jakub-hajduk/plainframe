@@ -1,4 +1,14 @@
-<section class="sb-primary">
-  <slot />
-</section>
+---
+import Story from './Story.astro'
 
+interface Props {
+  of?: unknown
+}
+
+const { of } = Astro.props as Props
+const hasChildren = await Astro.slots.has('default')
+---
+
+<section class="sb-primary">
+  {hasChildren ? <slot /> : <Story of={of} />}
+</section>
