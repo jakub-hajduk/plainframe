@@ -1,0 +1,9 @@
+---
+interface Props {
+  title?: string
+}
+
+const { title } = Astro.props as Props
+---
+
+{title ? <div hidden data-storybook-title={title} /> : null}

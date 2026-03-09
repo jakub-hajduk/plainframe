@@ -1,0 +1,75 @@
+import MainLayout from '../layouts/MainLayout.astro'
+import PageLayout from '../layouts/PageLayout.astro'
+import WritingLayout from '../layouts/WritingLayout.astro'
+import StorybookBadge from '../components/examples/StorybookBadge.astro'
+import {
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Canvas,
+  Story,
+  Source,
+  ArgsTable,
+  Controls
+} from '@storybook/blocks'
+
+<MainLayout>
+  <PageLayout>
+    <WritingLayout>
+      <Meta title="Integration/StorybookMdx" />
+
+      <Title>Storybook stories</Title>
+      <Subtitle>Sample MDX compatibility page</Subtitle>
+      <Description>
+        This page uses Storybook MDX-style blocks imported from `@storybook/blocks`.
+        In this template, those blocks are replaced by your custom Astro-compatible components.
+      </Description>
+
+      This paragraph is regular MDX body text. It should render exactly like normal content around stories.
+
+      <Canvas>
+        <Story
+          of={{
+            name: 'Default badge',
+            component: StorybookBadge,
+            args: { label: 'Default', tone: 'default' }
+          }}
+        />
+      </Canvas>
+
+      More body text after the first story. This verifies text still renders between Storybook-style blocks.
+
+      <Canvas>
+        <Story
+          of={{
+            name: 'Success badge',
+            component: StorybookBadge,
+            args: { label: 'Success', tone: 'success' }
+          }}
+        />
+      </Canvas>
+
+      <h2>Source</h2>
+      <Source code={`<Canvas>\n  <Story of={{ name: 'Default badge', component: StorybookBadge, args: { label: 'Default', tone: 'default' } }} />\n</Canvas>`} />
+
+      <h2>Controls / Args</h2>
+      <Controls
+        of={{
+          name: 'Success badge',
+          component: StorybookBadge,
+          args: { label: 'Success', tone: 'success' }
+        }}
+      />
+      <ArgsTable
+        of={{
+          name: 'Default badge',
+          component: StorybookBadge,
+          args: { label: 'Default', tone: 'default' }
+        }}
+      />
+
+      Final text block: all plain text, headings, and Storybook MDX blocks can be mixed on one page.
+    </WritingLayout>
+  </PageLayout>
+</MainLayout>

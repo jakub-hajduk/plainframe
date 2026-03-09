@@ -1,0 +1,30 @@
+---
+interface Props {
+  code?: string
+  dark?: boolean
+}
+
+const { code = '', dark = false } = Astro.props as Props
+const hasChildren = await Astro.slots.has('default')
+---
+
+<pre class:list={['sb-source', { dark }]}>
+  <code>
+    {hasChildren ? <slot /> : code}
+  </code>
+</pre>
+
+<style>
+  .sb-source {
+    border-radius: var(--plainframe-radius-rectangle-300, 8px);
+    padding: 1rem;
+    overflow-x: auto;
+    background: #f5f5f5;
+  }
+
+  .sb-source.dark {
+    background: #1d1f21;
+    color: #f3f4f6;
+  }
+</style>
+

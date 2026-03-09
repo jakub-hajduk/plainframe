@@ -1,6 +1,8 @@
 // @ts-check
 import astroExpressiveCode from 'astro-expressive-code'
+import mdx from '@astrojs/mdx'
 import { defineConfig } from 'astro/config';
+import { fileURLToPath } from 'node:url'
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,6 +21,15 @@ export default defineConfig({
           shadowColor: 'transparent'
         }
       }
-    })
-  ]
+    }),
+    mdx()
+  ],
+  vite: {
+    resolve: {
+      alias: {
+        '@storybook/blocks': fileURLToPath(new URL('./src/components/storybook-blocks/index.ts', import.meta.url)),
+        '@storybook/addon-docs/blocks': fileURLToPath(new URL('./src/components/storybook-blocks/index.ts', import.meta.url))
+      }
+    }
+  }
 });

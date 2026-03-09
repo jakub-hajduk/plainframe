@@ -1,0 +1,51 @@
+---
+interface Props {
+  of?: {
+    args?: Record<string, unknown>
+  }
+}
+
+const { of } = Astro.props as Props
+const args = of?.args ?? {}
+const entries = Object.entries(args)
+const hasChildren = await Astro.slots.has('default')
+---
+
+{hasChildren ? (
+  <slot />
+) : entries.length ? (
+  <table class="sb-args-table">
+    <thead>
+      <tr>
+        <th>Arg</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {entries.map(([key, value]) => (
+        <tr>
+          <td>{key}</td>
+          <td><code>{JSON.stringify(value)}</code></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+) : (
+  <p>No args available.</p>
+)}
+
+<style>
+  .sb-args-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+
+  .sb-args-table th,
+  .sb-args-table td {
+    border: 1px solid var(--plainframe-color-neutral-300, #d8d8d8);
+    padding: 0.5rem;
+    text-align: left;
+  }
+</style>
+
