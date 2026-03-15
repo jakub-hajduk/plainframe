@@ -1,5 +1,5 @@
 ---
-import { Code } from 'astro-expressive-code/components'
+import { Code as ECCode } from 'astro-expressive-code/components'
 
 interface Props {
   code?: string;
@@ -8,9 +8,7 @@ interface Props {
 }
 
 const { code, lang, className } = Astro.props
-
-console.log(code)
 ---
 
-<Code lang={lang} code={code} class={className || ''}/>
+<ECCode lang={lang} code={code || ''} class={className || ''}/>
 

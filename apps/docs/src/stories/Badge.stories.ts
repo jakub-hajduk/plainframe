@@ -1,4 +1,4 @@
-import StorybookBadge from '../components/examples/StorybookBadge.astro'
+import StorybookBadge from '../examples/StorybookBadge.astro'
 
 const meta = {
   title: 'Examples/Badge',

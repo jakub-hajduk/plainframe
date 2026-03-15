@@ -1,8 +1,5 @@
-import StorybookBadge from '../components/examples/StorybookBadge.astro'
-
 const meta = {
   title: 'Examples/Badge Custom',
-  component: StorybookBadge,
   args: {
     tone: 'success'
   }

@@ -16,7 +16,6 @@ export default defineConfig({
         codePaddingBlock: 'var(--plainframe-space-medium-900)',
         codePaddingInline: 'var(--plainframe-space-medium-1300)',
         borderRadius: 'var(--plainframe-radius-rectangle-300)',
-
         frames: {
           shadowColor: 'transparent'
         }
@@ -27,8 +26,8 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '@storybook/blocks': fileURLToPath(new URL('./src/components/storybook-blocks/index.ts', import.meta.url)),
-        '@storybook/addon-docs/blocks': fileURLToPath(new URL('./src/components/storybook-blocks/index.ts', import.meta.url))
+        '@storybook/blocks': 'plainframe/storybook-blocks',
+        '@storybook/addon-docs/blocks': 'plainframe/storybook-blocks'
       }
     }
   }

@@ -1,0 +1,27 @@
+{
+  "name": "@repo/docs",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jakub Hajduk",
+    "email": "devhajduk@gmail.com"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "@astrojs/mdx": "^5.0.0",
+    "astro": "^6.0.4",
+    "astro-expressive-code": "^0.41.7",
+    "plainframe": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0"
+  }
+}

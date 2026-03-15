@@ -1,16 +1,8 @@
 {
-  "name": "",
-  "type": "module",
+  "name": "plainframe-main",
   "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "astro": "^5.16.6",
-    "astro-expressive-code": "^0.41.5"
+  "author": {
+    "name": "Jakub Hajduk",
+    "email": "devhajduk@gmail.com"
   }
 }
