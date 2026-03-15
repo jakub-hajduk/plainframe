@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  href?: string;
+  active?: boolean;
+}
+
+const hasAppend = Astro.slots.has('append');
+
+const {
+  title,
+  href,
+  active
+} = Astro.props
+
+---
+<li>
+  <a class="section-heading" href={href}>{title}</a>
+  {hasAppend && <slot name="append" />}
+</li>
+
+<style>
+    li {
+        margin: 0;
+        list-style-type: none;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: var(--plainframe-color-neutral-1300);
+        padding: var(--plainframe-space-medium-100) var(--plainframe-space-medium-600);
+        border-radius: var(--plainframe-radius-rectangle-200);
+        font: var(--plainframe-typography-body-700);
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+</style>

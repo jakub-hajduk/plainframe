@@ -1,10 +1,8 @@
 ---
 import { Code } from 'plainframe/components'
-import { WritingLayout } from "plainframe/layouts";
-import { PageLayout } from "plainframe/layouts";
-import { MainLayout } from "plainframe/layouts";
 import { Note } from "plainframe/components";
 import { Hero } from 'plainframe/components'
+import Page from '../layouts/Page.astro'
 
 const code = `@customElement('elo')
 class Component {
@@ -14,10 +12,7 @@ class Component {
   }
 }`
 ---
-
-<MainLayout>
-    <PageLayout>
-        <WritingLayout>
+    <Page>
             <Hero>
               <h1>The Kitchen Sink</h1>
               <p class="hero-description">
@@ -180,9 +175,7 @@ class Component {
             egestas semper. Aenean ultricies mi vitae est. Mauris placerat
             eleifend leo.
             </p>
-        </WritingLayout>
-    </PageLayout>
-</MainLayout>
+    </Page>
 
 <style>
     .hero-description {

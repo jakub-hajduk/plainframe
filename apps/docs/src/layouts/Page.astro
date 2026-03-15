@@ -1,0 +1,61 @@
+---
+import { MainLayout, PageLayout, WritingLayout } from 'plainframe/layouts'
+import { Navigation, NavigationHeading, NavigationItem, NavigationDivider } from 'plainframe/partials'
+---
+<MainLayout>
+    <PageLayout>
+        <span slot="top-left">
+            PLAINFRAME
+        </span>
+
+        <div slot="sidebar">
+            <Navigation>
+                <NavigationHeading href="/components" title="Components"/>
+                <NavigationItem href="/" title="Home"/>
+                <NavigationItem href="/storybook-stories" title="Storybook stories"/>
+                <NavigationItem href="/docs" title="Docs"/>
+                <NavigationItem href="/blog" title="Blog"/>
+                <NavigationItem href="/guides" title="Guides"/>
+                <NavigationDivider />
+                <NavigationItem href="/resources" title="Resources">
+                    <NavigationItem href="/resources/tutorials" title="Tutorials"/>
+                    <NavigationItem href="/resources/examples" title="Examples"/>
+                    <NavigationItem href="/resources/faq" title="FAQ">
+                        <span slot="append">(+1)</span>
+                    </NavigationItem>
+                    <NavigationItem href="/resources/community" title="Community"/>
+                    <NavigationItem href="/resources/roadmap" title="Roadmap"/>
+                    <NavigationItem href="/resources/updates" title="Updates"/>
+                </NavigationItem>
+
+                <NavigationItem href="/support" title="Support"/>
+                <NavigationItem href="/pricing" title="Pricing"/>
+                <NavigationItem href="/contact" title="Contact">
+                    <NavigationItem href="/contact/email" title="Email"/>
+                    <NavigationItem href="/contact/phone" title="Phone"/>
+                    <NavigationItem href="/contact/address" title="Address"/>
+                </NavigationItem>
+            </Navigation>
+        </div>
+
+        <Fragment slot="top-right">
+            <a href="/">Some link</a>
+        </Fragment>
+
+        <WritingLayout>
+            <slot/>
+        </WritingLayout>
+
+    </PageLayout>
+</MainLayout>
+
+<style>
+    svg {
+        color: var(--plainframe-color-primary-1100);
+    }
+
+    svg {
+        display: block;
+        height: var(--plainframe-size-large-700);
+    }
+</style>

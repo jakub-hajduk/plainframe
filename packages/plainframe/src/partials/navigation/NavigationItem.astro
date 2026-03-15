@@ -1,0 +1,82 @@
+---
+interface Props {
+  title: string;
+  href?: string;
+  active?: boolean;
+}
+
+const hasChildren = Astro.slots.has('default');
+const hasAppend = Astro.slots.has('append');
+
+const {
+    title,
+    href,
+    active
+} = Astro.props
+
+const { pathname } = Astro.url;
+let isActive = false;
+
+if (active !== undefined) {
+    isActive = active
+}else if ( href === '/') {
+    isActive = pathname === href
+} else if (href !== undefined && href !== '/') {
+    isActive = pathname.startsWith(href)
+}
+
+---
+
+<li>
+    <span class={isActive ? 'active' : ''}>
+        { href
+          ? <a class="title" href={ href }>{ title }</a>
+          : <span class="title">{ title }</span>
+        }
+        { hasAppend && <slot name="append" class="append" />}
+    </span>
+    { hasChildren && <ul><slot/></ul>}
+</li>
+
+<style>
+    li {
+        margin: 0;
+        list-style-type: none;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: var(--plainframe-space-medium-500);
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: var(--plainframe-space-medium-100);
+        border-radius: var(--plainframe-radius-rectangle-200);
+    }
+
+    .title {
+        flex: 1 1 auto;
+        text-decoration: none;
+        color: var(--plainframe-color-neutral-1300);
+        padding: var(--plainframe-space-medium-100) var(--plainframe-space-medium-600);
+    }
+
+    slot.append {
+        flex: 1 1 fit-content;
+    }
+
+    .active {
+        background-color: var(--plainframe-color-primary-100);
+        font-weight: 600;
+    }
+
+    .active .title {
+        color: var(--plainframe-color-primary-1300);
+    }
+
+    span:hover a {
+        text-decoration: underline;
+    }
+</style>

@@ -1,0 +1,23 @@
+---
+---
+<nav id="main-navigation">
+    <ul>
+      <slot/>
+    </ul>
+</nav>
+
+<style>
+    #main-navigation {
+        background-color: var(--plainframe-color-canvas-100);
+        padding: 0 var(--plainframe-space-medium-700);
+        font: var(--plainframe-typography-body-600);
+    }
+
+    #main-navigation > ul {
+        padding-left: 0;
+    }
+
+    #main-navigation ul li {
+        margin: 0;
+    }
+</style>
