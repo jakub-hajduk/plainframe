@@ -2,13 +2,7 @@
 import { type AstroIntegration } from 'astro'
 import astroExpressiveCode from 'astro-expressive-code'
 import mdx from '@astrojs/mdx'
-import { defineConfig } from 'astro/config';
-import { fileURLToPath } from 'node:url'
 import { addIntegration, defineIntegration } from 'astro-integration-kit'
-
-interface PlainframeOptions {
-
-}
 
 export default defineIntegration({
   name: "plainframe-theme",
@@ -16,6 +10,7 @@ export default defineIntegration({
     return {
       hooks: {
         "astro:config:setup": (params) => {
+
           addIntegration(params, {
             integration: astroExpressiveCode({
                 themes: ['one-dark-pro'],
@@ -33,6 +28,7 @@ export default defineIntegration({
                 }
               })
           })
+
           addIntegration(params, {
             integration: mdx()
           })
