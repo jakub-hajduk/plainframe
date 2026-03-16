@@ -1,6 +1,5 @@
-// @ts-check
-import { type AstroIntegration } from 'astro'
 import astroExpressiveCode from 'astro-expressive-code'
+import { mergeConfig } from 'astro/config',
 import mdx from '@astrojs/mdx'
 import { addIntegration, defineIntegration } from 'astro-integration-kit'
 
@@ -33,8 +32,16 @@ export default defineIntegration({
             integration: mdx()
           })
 
-          params.config.vite.resolve.alias['@storybook/blocks'] = 'plainframe/storybook-blocks',
-          params.config.vite.resolve.alias['@storybook/addon-docs/blocks'] = 'plainframe/storybook-blocks'
+          params.config = mergeConfig(params.config, {
+            vite: {
+              resolve: {
+                alias: {
+                  '@storybook/blocks': 'plainframe/storybook-blocks',
+                  '@storybook/addon-docs/blocks': 'plainframe/storybook-blocks'
+                }
+              }
+            }
+          })
         }
       }
     }

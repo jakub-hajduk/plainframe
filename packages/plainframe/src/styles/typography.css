@@ -1,6 +1,6 @@
 body {
     font: var(--plainframe-typography-body-700);
-    color: var(--plainframe-color-neutral-1200)
+    color: var(--plainframe-color-neutral-1000)
 }
 
 p {
@@ -8,6 +8,10 @@ p {
     margin: var(--plainframe-space-medium-700) 0;
     text-align: justify;
     line-height: 1.8
+}
+
+b, strong {
+    color: var(--plainframe-color-neutral-1100);
 }
 
 ul, ol, dl {
@@ -21,41 +25,57 @@ dl dt {
     margin: var(--plainframe-space-medium-100) 0;
 }
 
+dl dt {
+    color: var(--plainframe-color-neutral-1200);
+    font-weight: 700
+}
+
 
 h1 {
     font: var(--plainframe-typography-heading-1000);
     font-weight: 600;
     margin: var(--plainframe-space-medium-700) 0;
+    letter-spacing: -0.1rem;
+    color: var(--plainframe-color-neutral-1200);
 }
 
 h2 {
     font: var(--plainframe-typography-heading-900);
     font-weight: 500;
     margin: var(--plainframe-space-medium-700) 0;
+    letter-spacing: -0.1rem;
+    color: var(--plainframe-color-neutral-1200);
 }
 
 h3 {
     font: var(--plainframe-typography-heading-800);
     font-weight: 500;
     margin: var(--plainframe-space-medium-700) 0;
+    letter-spacing: -0.1rem;
+    color: var(--plainframe-color-neutral-1200);
 }
 
 h4 {
     font: var(--plainframe-typography-heading-700);
     font-weight: 500;
     margin: var(--plainframe-space-medium-700) 0;
+    letter-spacing: -0.1rem;
+    color: var(--plainframe-color-neutral-1200);
 }
 
 h5 {
     font: var(--plainframe-typography-heading-600);
     font-weight: 300;
     margin: var(--plainframe-space-medium-700) 0;
+    letter-spacing: -0.1rem;
+    color: var(--plainframe-color-neutral-1200);
 }
 
 h6 {
     font: var(--plainframe-typography-heading-500);
     font-weight: 300;
     margin: var(--plainframe-space-medium-700) 0;
+    letter-spacing: -0.1rem;
 }
 
 small {
